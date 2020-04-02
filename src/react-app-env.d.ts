@@ -12,6 +12,7 @@ type ColourFragment = {
 type CommonColours = {
   black: string
   white: string
+  blackPearl: string
 }
 
 type ColourPalette = {
@@ -24,13 +25,15 @@ type ColourPalette = {
   common: CommonColours
 }
 
-type ThemeType = {
-  typography: {
-    fontFamily: {
-      primary: string
-      secondary: string
-    }
+type Typography = {
+  fontFamily: {
+    primary: string
+    secondary: string
   }
+}
+
+type ThemeType = {
+  typography: Typography
   palette: ColourPalette
 }
 
@@ -42,6 +45,4 @@ type WithTheme = {
   Game
 ==================================== */
 
-type XOType = 'X' | 'O'
-
-type TurnsType = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
+type TurnsType = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8

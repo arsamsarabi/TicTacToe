@@ -7,7 +7,7 @@ export type GameStoreType = {
   isGameOver: boolean
   nextTurn(): void
   board: BoardStoreType
-  play(position: TurnsType): void
+  play(position: TurnsType, symbol: string): void
 }
 
 class GameStore implements GameStoreType {
@@ -27,9 +27,9 @@ class GameStore implements GameStoreType {
   }
 
   @action
-  play = (position: TurnsType): void => {
-    if (!this.isGameOver && this.board.cells[position - 1].content === '') {
-      this.board.play(position, this.turn)
+  play = (position: TurnsType, symbol: string): void => {
+    if (!this.isGameOver && this.board.cells[position].content === '') {
+      this.board.play(position, symbol)
       this.nextTurn()
     }
   }

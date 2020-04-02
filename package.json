@@ -25,6 +25,7 @@
     ]
   },
   "dependencies": {
+    "@material-ui/core": "^4.9.8",
     "mobx": "^5.15.4",
     "mobx-react-lite": "^1.5.2",
     "polished": "^3.5.1",

@@ -1,13 +1,13 @@
 import { action, observable } from 'mobx'
 
 export type CellStoreType = {
-  content: XOType | ''
+  content: string
   position: TurnsType
-  fill(shape: XOType): void
+  fill(shape: string): void
 }
 
 class CellStore implements CellStoreType {
-  @observable content: XOType | ''
+  @observable content: string
   @observable position: TurnsType
 
   constructor(position: TurnsType) {
@@ -16,7 +16,7 @@ class CellStore implements CellStoreType {
   }
 
   @action
-  fill = (shape: XOType): void => {
+  fill = (shape: string): void => {
     if (!this.content) {
       this.content = shape
     }
