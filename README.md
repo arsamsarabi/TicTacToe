@@ -1,1 +1,3 @@
-# 3D Tic Tac Toe
+# Tic Tac Toe
+
+Classic game of Tic Tac Toe developed using `React`, `TypeScript`, `MobX`, `Styled-Components`, ...

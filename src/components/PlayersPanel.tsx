@@ -7,10 +7,10 @@ import PlayerInfo from './PlayerInfo'
 
 const PlayersPanelWrapper = styled.div<WithTheme>(({ theme }) => {
   return css`
-    border-top: 1px solid ${theme.palette.primary.light};
-    border-bottom: 1px solid ${theme.palette.primary.light};
-    margin: 16px 0;
-    padding: 8px 0;
+    border-top: ${theme.borders.seperator};
+    border-bottom: ${theme.borders.seperator};
+    margin: 24px 0;
+    padding: 16px 0;
   `
 })
 

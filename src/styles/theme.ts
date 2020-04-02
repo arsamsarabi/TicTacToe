@@ -1,11 +1,16 @@
-import { lighten, darken } from 'polished'
+import { lighten, darken, rgba } from 'polished'
 
-const PRIMARY_COLOUR = '#0fbcf9'
-const SECONDARY_COLOUR = '#fd79a8'
-const ACCENT_COLOUR = '#4bcffa'
-const SUCCESS_COLOUR = '#05c46b'
-const DANGER_COLOUR = '#f53b57'
-const WARNING_COLOUR = '#ffa801'
+const palette = {
+  primary: '#0fbcf9',
+  secondary: '#fd79a8',
+  accent: '#4bcffa',
+  success: '#05c46b',
+  danger: '#f53b57',
+  warning: '#ffa801',
+  blackPearl: '#1e272e',
+  black: '#2d3436',
+  white: '#ecf0f1',
+}
 
 export const theme: ThemeType = {
   typography: {
@@ -16,39 +21,42 @@ export const theme: ThemeType = {
   },
   palette: {
     primary: {
-      light: lighten(0.25, PRIMARY_COLOUR),
-      main: PRIMARY_COLOUR,
-      dark: darken(0.5, PRIMARY_COLOUR),
+      light: lighten(0.25, palette.primary),
+      main: palette.primary,
+      dark: darken(0.5, palette.primary),
     },
     secondary: {
-      light: lighten(0.25, SECONDARY_COLOUR),
-      main: SECONDARY_COLOUR,
-      dark: darken(0.5, SECONDARY_COLOUR),
+      light: lighten(0.25, palette.secondary),
+      main: palette.secondary,
+      dark: darken(0.5, palette.secondary),
     },
     accent: {
-      light: lighten(0.25, ACCENT_COLOUR),
-      main: ACCENT_COLOUR,
-      dark: darken(0.5, ACCENT_COLOUR),
+      light: lighten(0.25, palette.accent),
+      main: palette.accent,
+      dark: darken(0.5, palette.accent),
     },
     success: {
-      light: lighten(0.25, SUCCESS_COLOUR),
-      main: SUCCESS_COLOUR,
-      dark: darken(0.5, SUCCESS_COLOUR),
+      light: lighten(0.25, palette.success),
+      main: palette.success,
+      dark: darken(0.5, palette.success),
     },
     danger: {
-      light: lighten(0.25, DANGER_COLOUR),
-      main: DANGER_COLOUR,
-      dark: darken(0.5, DANGER_COLOUR),
+      light: lighten(0.25, palette.danger),
+      main: palette.danger,
+      dark: darken(0.5, palette.danger),
     },
     warning: {
-      light: lighten(0.25, WARNING_COLOUR),
-      main: WARNING_COLOUR,
-      dark: darken(0.5, WARNING_COLOUR),
+      light: lighten(0.25, palette.warning),
+      main: palette.warning,
+      dark: darken(0.5, palette.warning),
     },
     common: {
-      black: '#2d3436',
-      white: '#ecf0f1',
-      blackPearl: '#1e272e',
+      black: palette.black,
+      white: palette.white,
+      blackPearl: palette.blackPearl,
     },
+  },
+  borders: {
+    seperator: `2px solid ${rgba(palette.blackPearl, 0.7)}`,
   },
 }

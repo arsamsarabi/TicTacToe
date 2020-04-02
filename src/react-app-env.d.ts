@@ -32,9 +32,14 @@ type Typography = {
   }
 }
 
+type Borders = {
+  seperator: string
+}
+
 type ThemeType = {
   typography: Typography
   palette: ColourPalette
+  borders: Borders
 }
 
 type WithTheme = {
