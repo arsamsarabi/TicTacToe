@@ -53,14 +53,14 @@ const GameOverModal = (): ReactElement => {
     <StyledModal
       aria-labelledby="transition-modal-title"
       aria-describedby="transition-modal-description"
-      open={game.isGameOver || true}
+      open={game.isGameOver}
       closeAfterTransition
       BackdropComponent={Backdrop}
       BackdropProps={{
         timeout: 500,
       }}
     >
-      <Fade in={game.isGameOver || true}>
+      <Fade in={game.isGameOver}>
         <ModalContent>
           <ModalTitle id="transition-modal-title">Game Over!</ModalTitle>
           <p id="transition-modal-description">{game.gameOverMessage}</p>
