@@ -7,7 +7,8 @@ export type PlayerStoreType = {
   symbol: string
   color: string
   won(): void
-  setMyTurn(isMyTurn: boolean): void
+  setTurn(isMyTurn: boolean): void
+  toggleTurn(): void
 }
 
 class PlayerStore implements PlayerStoreType {
@@ -31,8 +32,13 @@ class PlayerStore implements PlayerStoreType {
   }
 
   @action
-  setMyTurn = (isMyTurn: boolean): void => {
+  setTurn = (isMyTurn: boolean): void => {
     this.myTurn = isMyTurn
+  }
+
+  @action
+  toggleTurn = (): void => {
+    this.myTurn = !this.myTurn
   }
 }
 

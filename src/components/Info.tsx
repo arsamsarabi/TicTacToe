@@ -21,17 +21,19 @@ const GameName = styled.h1(({ theme }) => {
     font-size: 2.5rem;
     display: block;
     text-align: center;
+    margin-bottom: 16px;
   `
 })
 
 const Info: FC = (): ReactElement => {
   const {
-    TicTacToeStore: { restart },
+    TicTacToeStore: { restart, gameCount },
   } = useStores()
 
   return (
     <InfoWrapper>
       <GameName>Tic Tac Toe</GameName>
+      <p>{`Game number ${gameCount}`}</p>
       <PlayersPanel />
       <Button onClick={restart} variant="outlined" color="secondary">
         Restart Game

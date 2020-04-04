@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components'
 
 import Board from './Board'
 import Info from './Info'
+import GameOverModal from './GameOverModal'
 
 const GameWrapper = styled.section(() => {
   return css`
@@ -29,6 +30,7 @@ const Game: FC = (): ReactElement => {
       <Info />
       <GameArea>
         <Board />
+        <GameOverModal />
       </GameArea>
     </GameWrapper>
   )

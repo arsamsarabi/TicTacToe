@@ -18,8 +18,7 @@ const BoardWrapper = styled.div(() => {
 const Board: FC = (): ReactElement => {
   const {
     TicTacToeStore: {
-      game: { board },
-      play,
+      game: { board, play },
     },
   } = useStores()
 

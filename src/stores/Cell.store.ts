@@ -1,16 +1,17 @@
-import { action, observable } from 'mobx'
+import { action, observable, computed } from 'mobx'
 
 export type CellStoreType = {
   content: string
-  position: TurnsType
+  position: number
   fill(shape: string): void
+  isFilledIn: boolean
 }
 
 class CellStore implements CellStoreType {
   @observable content: string
-  @observable position: TurnsType
+  @observable position: number
 
-  constructor(position: TurnsType) {
+  constructor(position: number) {
     this.content = ''
     this.position = position
   }
@@ -20,6 +21,11 @@ class CellStore implements CellStoreType {
     if (!this.content) {
       this.content = shape
     }
+  }
+
+  @computed
+  get isFilledIn(): boolean {
+    return this.content !== ''
   }
 }
 
